@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -37,7 +39,7 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,15 +94,19 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition:  0.3s ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 15px 0;
   background-color: #121212;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease-in-out;
+
 }
 nav.navbar .navbar-brand img {
     width: 120px;
     height: auto;
+    padding-left: 10px;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 600;
@@ -267,7 +273,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner p {
   color: #FFFFFF;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -309,48 +315,64 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Experiencess Css ************/
-.experiences {
+.about {
   padding: 0 50px 50px 0;
   position: relative;
   text-align: center;
 }
-.experiences-bx {
+.about-bx {
   background: #151515;
   border-radius: 64px;
   padding: 60px 50px;
   margin-top: -60px;
   text-align: center;
 }
-.experiences h2 {
+.about h2 {
 	font-size: 45px;
 	font-weight: 700;
+  padding-bottom: 10px;
+  font-size: 50px;
 }
-.experiences p {
+.about p {
     color: #B8B8B8;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
 }
-.experiences-slider {
-  width: 80%;
+.about-slider {
+  width: 90%;
   margin: 0 auto;
   position: relative;
 }
-.experiences-slider .item img {
+.about-slider .item img {
   width: clamp(200px, 4vw, 500px);
   height: clamp(200px, 4vw, 500px);
   object-fit: contain;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 20px auto;
   display: block;
 }
 
-.experiences-slider .item {
+.about-slider .item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center; 
+}
+
+.react-multi-carousel-item {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.react-multi-carousel-track {
+  gap: 0 !important;
+}
+
+.react-multi-carousel-item > div {
+  width: fit-content !important;
+  margin: 0 auto;
 }
 
 .background-image-left {
@@ -359,6 +381,78 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+
+.modal-box {
+  background: #151515;
+  padding: 60px;
+  border-radius: 24px;
+  width: 85vw;
+  height: 80vh;
+  max-width: 1200px;
+  color: white;
+  text-align: left;
+  overflow-y: auto;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+}
+
+.modal-box {
+  position: relative;
+  animation: popIn 0.25s ease-out;
+  white-space: pre-line;
+
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+.modal-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 /************ Projects Css ************/

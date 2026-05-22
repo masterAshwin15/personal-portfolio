@@ -13,7 +13,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [val, setVal] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const intervalTime = 500;
+    const intervalTime = 400;
 
 
     useEffect(() => {
@@ -42,7 +42,7 @@ export const Banner = () => {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
             setIndex(1);
-            setVal(500);
+            setVal(400);
         } else {
             setIndex(prevIndex => prevIndex + 1);
         }
@@ -57,7 +57,7 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <div className="animate__animated animate__fadeIn">
                                 <span className="tagline">Welcome to my Portfolio</span>
-                                <h1>{`Hi!! I'm Ashwin, I am interested in `} <span className="txt-rotate" data-period="1000" data-rotate='["Software Developing", "Cybersecurity", "Cloud Engineering", "AI Engineering", "Machine Learning", "DevOps Engineering"]'><span className="wrap">{text}</span></span></h1>
+                                <h1>{`Hi!! I'm Ashwin, driven by my passion for `} <span className="txt-rotate" data-period="1000" data-rotate='["Software Developing", "Cybersecurity", "Cloud Engineering", "AI Engineering", "Machine Learning", "DevOps Engineering"]'><span className="wrap">{text}</span></span></h1>
                                 <p>I am currently a <b>fourth</b> year student at the University of Waterloo and Wilfrid Laurier University, where I am pursuing my Bachelors of Computer Science at UW and Bachelors of Business
                                 Administration at WLU. </p>
                             </div>
