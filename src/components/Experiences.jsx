@@ -118,7 +118,7 @@ export const Experiences = () => {
 
                       <ul>
                           <li>Automated finance workflows using Excel macros, APIs, and scripting solutions for bank statement distribution, while supporting unit, integration, and system testing for new financial systems. </li>
-                          <li>Supported month-end and quarter-end close processes by completing bank and ledger reconciliations, assisting with cash matching and compliance activities, and improving financial reporting efficiency.</li>
+                          <li>Supported month-end and quarter-end close processes by completing bank and ledger reconciliations, assisting with AR collections and compliance activities, and improving financial reporting efficiency.</li>
                       </ul>
                   
                   </div>
