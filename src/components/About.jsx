@@ -119,7 +119,7 @@ export const About = () => {
         </div>
       </div>
 
-      {/* MODAL */}
+      
       {selectedItem && (
         <div
           className="modal-overlay"
@@ -129,12 +129,12 @@ export const About = () => {
             className="modal-box"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* X close button */}
+            
             <button
               className="modal-close"
               onClick={() => setSelectedItem(null)}
             >
-              ×
+              x
             </button>
 
             <h2>{selectedItem.title}</h2>

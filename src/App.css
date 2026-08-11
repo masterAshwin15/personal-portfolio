@@ -321,7 +321,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ Experiencess Css ************/
+/************ About Css ************/
 .about {
   padding: 0 50px 50px 0;
   position: relative;
@@ -396,7 +396,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.6);
+  background: #151515;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -406,7 +406,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .modal-box {
-  background: #151515;
+  background: #383838;
   padding: 60px;
   border-radius: 24px;
   width: 85vw;
@@ -416,6 +416,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: left;
   overflow-y: auto;
   box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+}
+
+.modal-box p {
+  color: white;
 }
 
 .modal-box {
@@ -475,19 +479,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .resume-container {
-  width: 1300px;
+  width: 100%;
+  max-width: 1800px;
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
 /* LEFT COLUMN */
-
 .left-column {
-  width: 320px;
+  flex: 0 0 35%;
   background: #171717;
   border-radius: 30px;
   padding: 35px 25px;
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* RIGHT COLUMN */
+.right-column {
+  flex: 1;
+  background: #171717;
+  border-radius: 30px;
+  padding: 40px;
   color: white;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
@@ -676,7 +690,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* RESPONSIVE */
 
-@media (max-width: 1800px) {
+@media (max-width: 1000px) {
   .resume-container {
     width: 100%;
     max-width: 1800px;
@@ -771,6 +785,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 40px;
   height: 260px;
   margin: 0 12px;
+  color: white;
 }
 .proj-imgbx::before {
   content: "";
@@ -811,8 +826,69 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
   display: block;
-  padding: 0 12px; /* adds space from left/right edges */
+  padding: 0 12px;
 }
+
+.project-modal-box {
+  background: #383838;
+  padding: 40px;
+  border-radius: 24px;
+  width: 85vw;
+  height: 80vh;
+  max-width: 1200px;
+  color: white;
+  text-align: left;
+  overflow-y: auto;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+  position: relative;
+  animation: popIn 0.25s ease-out;
+  white-space: pre-line;
+}
+
+.project-modal-box p {
+  color: white;
+  width: 100%;
+  text-align: left;
+  margin: 25px 0 0 0;
+  line-height: 1.7;
+}
+
+.project-modal-box h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.project-card {
+  width: 300px;
+  min-height: 180px;
+  background: #171717;
+  border-radius: 24px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #2a2a2a;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #d6b25e;
+}
+
+.project-card h3 {
+  color: white;
+  font-size: 24px;
+}
+
+
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -890,6 +966,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   transition: 0.3s ease-in-out;
 }
+
+
 .contact form button:hover::before {
   width: 100%;
 }

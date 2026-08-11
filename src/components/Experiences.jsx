@@ -169,7 +169,7 @@ export const Experiences = () => {
                       </div>
 
                       <div className="timeline-header">
-                          <p>Junior Financial Analyst</p>
+                          <p>Firmware Developer</p>
                           <span>Waterloo, ON</span>
                       </div>
 
